@@ -1,0 +1,6 @@
+app/**/*.css
+src/scss/vendor/**/*
+.prettierrc
+.prettierignore
+.eslintrc
+.eslintignore
