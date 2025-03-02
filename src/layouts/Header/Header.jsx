@@ -5,7 +5,7 @@ import Button from "@/components/Button"
 import BurgerButton from "@/components/BurgerButton"
 
 const Header = (props) => {
-  const { url } = props
+  const { url, isFixed } = props
 
   const menuItems = [
     {
@@ -27,7 +27,12 @@ const Header = (props) => {
   ]
 
   return (
-    <header className="header" data-js-ovarlay-menu="">
+    <header
+      className={classNames("header", {
+        "is-fixed": isFixed,
+      })}
+      data-js-ovarlay-menu=""
+    >
       <div className="header__inner container">
         <Logo className="header__logo" loading="eager" />
         <dialog
