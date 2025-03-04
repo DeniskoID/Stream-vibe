@@ -1,7 +1,7 @@
 .category-card {
   --categoryCardImagesGradOppacity: 1;
 
-  display: inline-flex;
+  display: flex;
   flex-direction: column;
   border: var(--border);
   border-radius: var(--border-radius-l);
@@ -17,6 +17,10 @@
 
     border-color: currentColor;
     color: var(--color-white);
+  }
+
+  &:focus-visible {
+    outline-offset: -2px;
   }
 
   &__images {
