@@ -104,3 +104,10 @@ a {
 :has(.swiper) {
   min-width: 0;
 }
+
+// for dev
+.header,
+.content > *:not(:last-child),
+.footer {
+  display: none;
+}
