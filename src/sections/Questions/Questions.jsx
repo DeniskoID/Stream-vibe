@@ -2,7 +2,7 @@ import Section from "@/layouts/Section"
 import Button from "@/components/Button"
 import AccordionGroup from "@/components/AccordionGroup"
 import Accordion from "@/components/Accordion"
-import FAQData from "./FAQData"
+import faqData from "./faq-data"
 
 const Questions = () => {
   return (
@@ -13,7 +13,7 @@ const Questions = () => {
       actions={<Button label="Ask a Question" href="/support" />}
     >
       <AccordionGroup columns={2}>
-        {FAQData.map((item, index) => (
+        {faqData.map((item, index) => (
           <Accordion
             title={item.question}
             id={`question-${index}`}

@@ -1,4 +1,4 @@
-const planGroups = [
+const planGroupsData = [
   {
     title: "Monthly",
     isActive: true,
@@ -66,4 +66,4 @@ const planGroups = [
   },
 ]
 
-export default planGroups
+export default planGroupsData

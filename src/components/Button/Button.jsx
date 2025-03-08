@@ -13,6 +13,7 @@ const Button = (props) => {
      * mode:
      * '' - default
      * 'transparent' - transparent bg
+     * 'black-06' - bg-color black-06
      * 'black-10' - bg-color black-10
      *
      */
