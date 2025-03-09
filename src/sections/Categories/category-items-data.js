@@ -1,4 +1,4 @@
-const categoryItems = [
+const categoryItemsData = [
   {
     title: "Action",
     images: [
@@ -181,4 +181,4 @@ const categoryItems = [
   },
 ]
 
-export default categoryItems
+export default categoryItemsData

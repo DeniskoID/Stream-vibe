@@ -2,7 +2,7 @@ import Section from "@/layouts/Section"
 import CategoryCard from "@/components/CategoryCard"
 import Slider from "@/components/Slider"
 import SliderNavigation from "@/components/Slider/components/SliderNavigation"
-import categoryItems from "./categoryItems"
+import categoryItemsData from "./category-items-data"
 const Categories = () => {
   const sliderNavigationId = "categories-slider-navigation"
 
@@ -19,7 +19,7 @@ const Categories = () => {
         navigationTargetElementId={sliderNavigationId}
         isBeyondTheViewportOnMobileS
       >
-        {categoryItems.map((categoryItem, index) => (
+        {categoryItemsData.map((categoryItem, index) => (
           <CategoryCard key={index} {...categoryItem} />
         ))}
       </Slider>

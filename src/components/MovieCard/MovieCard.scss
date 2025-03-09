@@ -1,0 +1,37 @@
+.movie-card {
+  display: flex;
+  flex-direction: column;
+  border: var(--border);
+  border-radius: var(--border-radius-l);
+  padding: fluid(20, 12);
+  background-color: var(--color-black-10);
+  row-gap: fluid(20, 12);
+
+  @include laptop {
+    border-radius: var(--border-radius-m);
+  }
+
+  @include hover {
+    border-color: var(--color-white);
+  }
+
+  &__image {
+    border-radius: inherit;
+    width: 100%;
+  }
+
+  &__body {
+    display: flex;
+    column-gap: 8px;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__released-badge {
+    width: 100%;
+
+    &-label {
+      color: var(--color-gray-75);
+    }
+  }
+}

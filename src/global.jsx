@@ -6,7 +6,7 @@ import Footer from "@/layouts/Footer"
 import Content from "@/layouts/Content"
 
 export default function (props) {
-  const { children, title, url, isHeaderFixed } = props
+  const { children, title, url, isHeaderFixed, hasOverflowX } = props
   return (
     <>
       <Head htmlAttributes={{ lang: "en" }}>
@@ -32,7 +32,7 @@ export default function (props) {
         <link rel="manifest" href="/site.webmanifest" />
       </Head>
       <Header url={url} isFixed={isHeaderFixed} />
-      <Content isResetPaddingTop={isHeaderFixed}>
+      <Content isResetPaddingTop={isHeaderFixed} overflowXClip={hasOverflowX}>
         {children}
         <Banner />
       </Content>
