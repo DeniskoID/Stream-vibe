@@ -1,0 +1,20 @@
+.review-card {
+  display: grid;
+  border: var(--border);
+  border-radius: var(--border-radius-l);
+  padding: fluid(40, 24);
+  background-color: var(--color-black-06);
+  row-gap: fluid(20, 16);
+
+  &__header {
+    display: flex;
+    column-gap: 10px;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__name,
+  &__subtitle {
+    font-weight: 500;
+  }
+}

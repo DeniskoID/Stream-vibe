@@ -4,6 +4,38 @@ import { Navigation, Pagination, Scrollbar } from "swiper/modules"
 
 const rootSelector = "[data-js-slider]"
 
+const defaultSliderParams = {
+  slidesPerView: 5,
+  slidesPerGroup: 5,
+  spaceBetween: 30,
+  loop: true,
+  breakpoints: {
+    1441: {
+      spaceBetween: 30,
+      allowTouchMove: false,
+    },
+    1024: {
+      spaceBetween: 20,
+      allowTouchMove: false,
+    },
+    768: {
+      slidesPerView: 4,
+      slidesPerGroup: 4,
+      spaceBetween: 20,
+    },
+    481: {
+      slidesPerView: 3,
+      slidesPerGroup: 3,
+      spaceBetween: 20,
+    },
+    0: {
+      slidesPerView: 2,
+      slidesPerGroup: 1,
+      spaceBetween: 10,
+    },
+  },
+}
+
 class Slider {
   selectors = {
     root: rootSelector,
@@ -38,8 +70,10 @@ class Slider {
   }
 
   init() {
+    const params = this.params.sliderParams || defaultSliderParams
+
     new Swiper(this.swiperElement, {
-      ...this.params.sliderParams,
+      ...params, // Use provided params or defaults
       modules: [Navigation, Pagination, Scrollbar],
       navigation: {
         prevEl: this.previousButtonElement,
@@ -64,7 +98,8 @@ class SliderCollection {
   }
 
   init() {
-    document.querySelectorAll(rootSelector).forEach((element) => {
+    const sliders = document.querySelectorAll(rootSelector)
+    sliders.forEach((element) => {
       new Slider(element)
     })
   }

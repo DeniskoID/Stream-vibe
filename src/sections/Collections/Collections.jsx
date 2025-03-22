@@ -42,7 +42,7 @@ const Collections = () => {
                 >
                   <Slider
                     navigationTargetElementId={sliderNavigationId}
-                    sliderParams={sliderParams}
+                    slidesParams={sliderParams}
                     isBeyondTheViewportOnMobileS
                   >
                     {categoryItemsData?.map((categoryItem, index) => (
