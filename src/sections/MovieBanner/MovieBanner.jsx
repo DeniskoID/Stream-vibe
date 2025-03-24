@@ -12,7 +12,7 @@ const MovieBanner = () => {
         Movies & Shows
       </h1>
       <Slider
-        sliderParams={{
+        slidesParams={{
           slidesPerView: 1,
           breakpoints: {
             1024: {
