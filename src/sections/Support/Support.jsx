@@ -3,6 +3,7 @@ import "./Support.scss"
 import Field from "@/components/Field"
 import Checkbox from "@/components/Checkbox"
 import Button from "@/components/Button"
+import Select from "@/components/Select"
 
 const Support = () => {
   const titleId = "support-title"
@@ -54,6 +55,19 @@ const Support = () => {
           placeholder="(999) 999-99-99"
           inputMode="tel"
           mask="(000) 000-00-00"
+          renderBefore={(buttonClassName) => (
+            <Select
+              buttonClassName={buttonClassName}
+              label="Country Code"
+              options={[
+                { value: "+1", isSelected: true },
+                { value: "+2" },
+                { value: "+3" },
+                { value: "+4" },
+              ]}
+              isLabelHidden
+            />
+          )}
         />
         <Field
           className="support__form-cell support__form-cell--wide"
