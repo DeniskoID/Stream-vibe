@@ -128,7 +128,7 @@
     &.is-selected {
       color: var(--color-white);
 
-      &::before {
+      &::after {
         content: "✔";
       }
     }
