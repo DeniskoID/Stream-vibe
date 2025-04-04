@@ -22,7 +22,7 @@ const Header = (props) => {
     },
     {
       label: "Subscriptions",
-      href: "/subscribtions",
+      href: "/subscriptions",
     },
   ]
 
